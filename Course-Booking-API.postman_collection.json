@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "811ce97c-93d0-44bb-a496-b797cd29f9fb",
+		"name": "Course-Booking-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23938494"
+	},
+	"item": [
+		{
+			"name": "Check email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john1@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/checkEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"checkEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"customer\",\r\n    \"lastName\": \"customer\",\r\n    \"email\": \"customer@mail.com\",\r\n    \"mobileNo\": \"09123456789\",\r\n    \"password\": \"customer123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MGUzZjE0NmM3OWVjY2Y3NThhZmQ5MSIsImVtYWlsIjoiY3VzdG9tZXJAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzEyMjA5NzAyfQ.D-wE35e_AyBoQAuSsg8Tpa-GSmWuivSVJUcMgu0e3Cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MGUwYmIxYWE2ZTI3ZjIyZWE1OGQ5ZiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MTIyMDMxNzd9.kyyFz_oHG18AZ3K-Gxmj0mRMhFAgC_UilIQMyNz361Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nam\": \"ReactJS\",\r\n    \"description\": \"Make your website load faster\",\r\n    \"price\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get courses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MGUwYmIxYWE2ZTI3ZjIyZWE1OGQ5ZiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MTIyMTY2NzZ9.vh9fuBqtgMKHdMfSUt6-njCarfAp-Bp-6_Aw0Whn86o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/courses/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"courses",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all active courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific course",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/courses/660d6d0c891cd653f067f605",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"courses",
+						"660d6d0c891cd653f067f605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update course",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MGUwYmIxYWE2ZTI3ZjIyZWE1OGQ5ZiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MTIyMTY2NzZ9.vh9fuBqtgMKHdMfSUt6-njCarfAp-Bp-6_Aw0Whn86o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bootstrap\",\r\n    \"description\": \"Make mobile-responsive websites\",\r\n    \"price\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/courses/660d6d0c891cd653f067f605",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"courses",
+						"660d6d0c891cd653f067f605"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
